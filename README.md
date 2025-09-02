@@ -1,45 +1,46 @@
-Task-Manager-App
-A cross-platform mobile app built with React Native and Expo for managing daily tasks. This project supports both Android and iOS platforms and includes bonus features like push notifications and streamlined documentation.
+📱 Task-Manager-App
+A cross-platform mobile app built with React Native and Expo for managing daily tasks.
+Supports both Android and iOS platforms and includes bonus features like push notifications and clean documentation.
 
-Features
-Task creation, editing, and deletion
+📝 Features
+✅ Task creation, editing, and deletion
 
-Organized task views using tabs
+✅ Organized task views using tabs
 
-Push notifications to remind users of important deadlines
+✅ Push notifications for important deadlines
 
-Responsive design for both mobile platforms
+✅ Responsive design for all mobile platforms
 
-Clean, readable code and documentation
+✅ Clean, readable code & documentation
 
-Installation (Android)
-Download the APK file from the Expo build dashboard (link will be provided after build completion).
+🚀 Installation (Android)
+Download the APK from the Expo build dashboard (link will be provided after build completion).
 
 Transfer the APK to your Android device.
 
 Tap the APK and allow installation from unknown sources if prompted.
 
-Launch the app and start managing your tasks!
+Open the app and start managing your tasks!
 
-Cross-Platform Support
-Built with Expo and React Native, this app runs on both Android and iOS.
+🌐 Cross-Platform Support
+Built for both Android and iOS using a single React Native codebase.
 
-To build for iOS, follow the same Expo EAS cloud build steps and select the iOS platform.
+To build for iOS, use Expo EAS Build and select iOS as the target platform.
 
-Push Notifications
-Integrated with expo-notifications for timely task reminders.
+🔔 Push Notifications
+Integrated using expo-notifications for timely task reminders.
 
-Notifications require enabling permissions in-app during first launch.
+Permissions are requested on first app launch.
 
-Running Locally
+👩‍💻 Running Locally
 bash
 git clone https://github.com/<your-username>/<your-repo>.git
 cd Task-Manager-App
 npm install
 npx expo start
-Bonus Points
-Cross-platform (Android + iOS)
+🌟 Bonus Features
+🟢 Cross-platform (Android/iOS)
 
-Push notifications
+🟢 Push notifications
 
-Clean, commented code and documentation
+🟢 Modern UI and documentation
