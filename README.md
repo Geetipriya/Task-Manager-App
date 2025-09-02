@@ -1,46 +1,55 @@
-📱 Task-Manager-App
-A cross-platform mobile app built with React Native and Expo for managing daily tasks.
-Supports both Android and iOS platforms and includes bonus features like push notifications and clean documentation.
+# 📱 Task-Manager-App
 
-📝 Features
-✅ Task creation, editing, and deletion
+A cross-platform mobile app built with **React Native** and **Expo** for managing daily tasks.  
+Supports both **Android** and **iOS** platforms and includes bonus features like push notifications and clean documentation.
 
-✅ Organized task views using tabs
+---
 
-✅ Push notifications for important deadlines
+## 📝 Features
 
-✅ Responsive design for all mobile platforms
+- ✅ Task creation, editing, and deletion
+- ✅ Organized task views using tabs
+- ✅ Push notifications for important deadlines
+- ✅ Responsive design for all mobile platforms
+- ✅ Clean, readable code & documentation
 
-✅ Clean, readable code & documentation
+---
 
-🚀 Installation (Android)
-Download the APK from the Expo build dashboard (link will be provided after build completion).
+## 🚀 Installation (Android)
 
-Transfer the APK to your Android device.
+1. **Download the APK** from the Expo build dashboard (link provided after build completion).
+2. **Transfer the APK** to your Android device.
+3. **Tap the APK** and allow installation from unknown sources if prompted.
+4. **Open the app and start managing your tasks!**
 
-Tap the APK and allow installation from unknown sources if prompted.
+---
 
-Open the app and start managing your tasks!
+## 🌐 Cross-Platform Support
 
-🌐 Cross-Platform Support
-Built for both Android and iOS using a single React Native codebase.
+Runs on both **Android** and **iOS** using a single React Native codebase.  
+To build for iOS, use Expo EAS Build and select iOS as the platform.
 
-To build for iOS, use Expo EAS Build and select iOS as the target platform.
+---
 
-🔔 Push Notifications
-Integrated using expo-notifications for timely task reminders.
+## 🔔 Push Notifications
 
-Permissions are requested on first app launch.
+Integrated using **expo-notifications** for timely task reminders.  
+App requests notification permission on first launch.
 
-👩‍💻 Running Locally
-bash
-git clone https://github.com/<your-username>/<your-repo>.git
+---
+
+## 👩‍💻 Running Locally
+
+git clone https://github.com/Geetipriya/Task-Manager-App.git
 cd Task-Manager-App
 npm install
 npx expo start
-🌟 Bonus Features
-🟢 Cross-platform (Android/iOS)
+---
 
-🟢 Push notifications
+## 🌟 Bonus Features
 
-🟢 Modern UI and documentation
+- 🟢 Cross-platform (Android/iOS)
+- 🟢 Push notifications
+- 🟢 Modern UI and documentation
+
+
