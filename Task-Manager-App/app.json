@@ -11,7 +11,7 @@
     "extra": {
       "eas": {
         "projectId": "6dfb3d75-ae9a-4f0e-bdd6-d7558f38c1a3"
-         }}}
+         }},
     "ios": {
       "supportsTablet": true
     },
