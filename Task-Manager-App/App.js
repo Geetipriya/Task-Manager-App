@@ -45,7 +45,7 @@ export default function App() {
     return (
       <View style={styles.splashContainer}>
         <StatusBar barStyle="dark-content" />
-        <Image source={require('./assets/images/image.png')} style={styles.logo} resizeMode="contain" />
+        <Image source={require('./assets/images/icon.png')} style={styles.logo} resizeMode="contain" />
         <Text style={styles.title}>Task Manager</Text>
       </View>
     );
