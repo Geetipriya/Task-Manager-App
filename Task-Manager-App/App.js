@@ -14,7 +14,7 @@ export default function App() {
       <View style={styles.splashContainer}>
         <StatusBar barStyle="dark-content" />
         <Image
-          source={require('./assets/images/image.png')} // Your PNG logo file
+          source={require('./assets/images/image.png')} 
           style={styles.logo}
           resizeMode="contain"
         />
