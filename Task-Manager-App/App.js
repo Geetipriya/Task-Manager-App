@@ -1,94 +1,67 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Image, Button, StyleSheet, Platform, Dimensions } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
-import * as Notifications from 'expo-notifications';
-
-const isTablet = Dimensions.get('window').width > 768;
-
-
-SplashScreen.preventAutoHideAsync();
+import { View, Text, Image, StyleSheet, StatusBar } from 'react-native';
 
 export default function App() {
-  const [appReady, setAppReady] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
-    async function prepare() {
-      await Notifications.requestPermissionsAsync();
-
-      setTimeout(() => {
-        setAppReady(true);
-        SplashScreen.hideAsync();
-      }, 1800); // 1.8s splash
-    }
-    prepare();
+    const timer = setTimeout(() => setShowWelcome(false), 5000);
+    return () => clearTimeout(timer);
   }, []);
 
-  if (!appReady) {
-    return null;
+  if (showWelcome) {
+    return (
+      <View style={styles.splashContainer}>
+        <StatusBar barStyle="dark-content" />
+        <Image
+          source={require('./assets/images/image.png')}
+          style={styles.logo}
+          resizeMode="contain"
+        />
+        <Text style={styles.title}>Task Manager</Text>
+      </View>
+    );
   }
 
+  
   return (
-    <View style={isTablet ? styles.tabletContainer : styles.container}>
-      {!isAuthenticated ? (
-        <View style={styles.centered}>
-          <Image
-            source={require('./assets/images/image.png')}
-            style={isTablet ? styles.logoTablet : styles.logo}
-            resizeMode="contain"
-          />
-          <Text style={styles.title}>Task Manager</Text>
-          <Button title="Sign in" onPress={() => setIsAuthenticated(true)} />
-          <Button title="Sign up" onPress={() => setIsAuthenticated(true)} />
-        </View>
-      ) : (
-        <TaskManagerScreen />
-      )}
-    </View>
+    <AuthScreen />
   );
 }
-function TaskManagerScreen() {
+
+function AuthScreen() {
   return (
-    <View style={styles.centered}>
-      <Text style={styles.subtitle}>Welcome!</Text>
-      <Text>Here is your Task Manager (Add/Edit/Delete/Toggle tasks)</Text>
+    <View style={styles.authContainer}>
+      <Text style={styles.subtitle}>Sign In / Sign Up</Text>
+   
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  splashContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  tabletContainer: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 80,
-  },
-  centered: {
-    alignItems: 'center'
+    justifyContent: 'center',
+    backgroundColor: '#ffffff'
   },
   logo: {
     width: 120,
     height: 120,
-    marginBottom: 24
-  },
-  logoTablet: {
-    width: 220,
-    height: 220,
-    marginBottom: 30
+    marginBottom: 20
   },
   title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 14
+    fontSize: 30,
+    fontWeight: 'bold'
+  },
+  authContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   subtitle: {
-    fontSize: 22,
-    marginBottom: 8
+    fontSize: 24
   }
 });
+
 
